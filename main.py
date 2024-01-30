@@ -4,7 +4,7 @@ from datetime import date
 from datetime import timedelta
 from json import dumps
 
-consumer_key = os.environ['pushpa_api_key']
+consumer_key = os.environ['PUSHPA_API_KEY']
 consumer_secret = os.environ['PUSHPA_API_SECRET']
 access_token = os.environ['PUSHPA_ACCESS_KEY']
 access_token_secret = os.environ['PUSHPA_ACCESS_TOKEN_SECRET']
