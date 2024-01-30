@@ -14,5 +14,5 @@ auth = tweepy .OAuth1UserHandler(api_key, api_secret, access_token, access_token
 api = tweepy.API(auth)
 
 days = date(2024,8,15) - date.today() - timedelta(days = 1)
-cd = str(days.days) + " Days left for #Pushpa2TheRule @alluarjun"
+cd = str(days.days) + " Days left for #Pushpa2TheRule Rampage @alluarjun "
 response = client.create_tweet(text=cd)
