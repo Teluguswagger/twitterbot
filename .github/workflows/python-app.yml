@@ -15,21 +15,11 @@ jobs:
     - name: Install dependencies
       run: |
         pip install tweepy
-    - name: Upload image
-      id: upload-image
-      uses: actions/upload-artifact@v2
-        with:
-          name: image
-          path: /Users/tharunteja/Downloads/Pushpa_ The Rule - Part 2 (2024)_files/MV5BZTQ3M2QxMTAtMmQ0Yi00YmVmLThkZGYtODBiN2NhNjBhYzcwXkEyXkFqcGdeQXVyMTY0MTg5OTM4._V1_.jpg  
-
-      - name: Tweet with Image
     - name: run the bot
+      run: |
+        python main.py
       env:
           API_KEY : ${{ secrets.API_KEY }}
           API_SECRET : ${{ secrets.API_SECRET }}
           ACCESS_TOKEN : ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET : ${{ secrets.ACCESS_TOKEN_SECRET }}
-      run: |
-          python tweet_with_image.py ${{ steps.upload-image.outputs.artifact_path }}
-      run: |
-        python main.py
