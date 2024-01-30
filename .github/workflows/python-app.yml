@@ -1,7 +1,7 @@
 name: Run bot
 on:
   schedule:
-    - cron: '3 39 * * *'
+    - cron: '33 12 * * *'
   push:
     branches: [ main ]
 jobs:
@@ -19,8 +19,7 @@ jobs:
       run: |
         python main.py
       env:
-         api_key : ${{ secrets.api_key }}
-         api_secret : ${{ secrets.api_secret }}
-         bearer_token : ${{ secrets.bearer_token }}
-         access_token : ${{ secrets.access_token }}
-         access_token_secret : ${{ secrets.access_token_secret }}
+        PUSHPA_API_KEY : ${{ secrets.PUSHPA_API_KEY }}
+        PUSHPA_API_SECRET : ${{ secrets.PUSHPA_API_SECRET }}
+        PUSHPA_ACCESS_KEY : ${{ secrets.PUSHPA_ACCESS_KEY }}
+        PUSHPA_ACCESS_TOKEN_SECRET : ${{ secrets.PUSHPA_ACCESS_TOKEN_SECRET }}
