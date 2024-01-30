@@ -5,7 +5,7 @@ from datetime import timedelta
 from json import dumps
 
 api_key = "API_KEY"
-api_secret = "API_SECERT"
+api_secret = "API_SECRET"
 bearer_token = "BEARER_TOKEN"
 access_token = "ACCESS_TOKEN"
 access_token_secret = "ACCESS_TOKEN_SECRET"
