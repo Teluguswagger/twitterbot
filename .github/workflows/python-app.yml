@@ -19,7 +19,7 @@ jobs:
       run: |
         python main.py
       env:
-        PUSHPA_API_KEY : ${{ secrets.PUSHPA_API_KEY }}
-        PUSHPA_API_SECRET : ${{ secrets.PUSHPA_API_SECRET }}
-        PUSHPA_ACCESS_KEY : ${{ secrets.PUSHPA_ACCESS_KEY }}
-        PUSHPA_ACCESS_TOKEN_SECRET : ${{ secrets.PUSHPA_ACCESS_TOKEN_SECRET }}
+          API_KEY : ${{ secrets.API_KEY }}
+          API_SECRET : ${{ secrets.API_SECRET }}
+          ACCESS_TOKEN : ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET : ${{ secrets.ACCESS_TOKEN_SECRET }}
