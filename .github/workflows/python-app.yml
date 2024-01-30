@@ -21,5 +21,6 @@ jobs:
       env:
          api_key : ${{ secrets.Dcy5qVhM6BoWzSqUm4eC3eD9P }}
          api_secret : ${{ secrets.HI1qANYmgpYtp6NE3gAyreOh3v1rkIMTQPKtiSzZLmBBEDc1ny }}
+         bearer_token : ${{ secrets.AAAAAAAAAAAAAAAAAAAAACKOsAEAAAAALhaVx5HYqctmec6kTyvUI6ZhZTM%3Dp4fj4HdFUyLOqkz3dODmfIeE2kYuVTPJN01CiPSiTemSUdu7yr }}
          access_token : ${{ secrets.1751968878341885952-FwHZorPORJNugpZ2lJNOQVGxBHBQsO }}
          access_token_secret : ${{ secrets.92WuEA3u0SLlK9sokDN7WOLHKrnJ5NrA8BShMGK9S3LB2 }}
