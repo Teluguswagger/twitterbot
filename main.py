@@ -38,14 +38,10 @@ progress_bar_length = 20  # Length of the progress bar (number of characters)
 filled_length = int(progress_bar_length * (progress_percentage / 100))
 bar = '▓' * filled_length + '░' * (progress_bar_length - filled_length)
 
-# Adding a unique timestamp to avoid duplicate content errors
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
 # Status message with line gap before the progress bar
 if total_days > 0:
     status = (f"{total_days} Days left for #Pushpa2TheRule Rampage\n\n"
-              f"[{bar}] {progress_percentage:.0f}%\n"
-              f"Timestamp: {timestamp}")
+              f"[{bar}] {progress_percentage:.0f}%")
 elif total_days == 0:
     status = "Today is the day! #Pushpa2TheRule Rampage begins! @alluarjun"
 else:
