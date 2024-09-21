@@ -3,7 +3,6 @@ import os
 from datetime import date
 from datetime import timedelta
 from json import dumps
-from PIL import Image, ImageDraw, ImageFont
 
 consumer_key = os.environ['API_KEY']
 consumer_secret = os.environ['API_SECRET']
