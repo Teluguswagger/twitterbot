@@ -15,6 +15,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install tweepy
+        pip install pillow
     - name: run the bot
       run: |
         python main.py
