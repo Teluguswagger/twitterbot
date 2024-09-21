@@ -39,7 +39,7 @@ bar = '▓' * filled_length + '░' * (progress_bar_length - filled_length)
 
 # Status message with progress bar after the mention of @alluarjun
 if total_days > 0:
-    status = (f"{total_days} Days left for #Pushpa2TheRule Rampage @alluarjun\n\n"
+    status = (f"{total_days} Days left for #Pushpa2TheRule Rampage\n\n"
               f"[{bar}] {progress_percentage:.0f}%")
 elif total_days == 0:
     status = "Today is the day! #Pushpa2TheRule Rampage begins! @alluarjun"
