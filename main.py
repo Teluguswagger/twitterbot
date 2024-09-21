@@ -41,7 +41,7 @@ bar = '▓' * filled_length + '░' * (progress_bar_length - filled_length)
 
 # Creating the message for the tweet
 if days_left > 0:
-    cd = (f"{days_left} Days left for #Pushpa2TheRule Rampage @alluarjun\n\n"
+    cd = (f"{days_left} Days left for #Pushpa2TheRule Rampage\n\n"
           f"[{bar}] {progress_percentage:.0f}%")
 elif days_left == 0:
     cd = "Today is the day! #Pushpa2TheRule Rampage begins! @alluarjun"
