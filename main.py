@@ -14,6 +14,7 @@ client = tweepy.Client(consumer_key=consumer_key,
                     access_token=access_token,
                     access_token_secret=access_token_secret)
 
+# Event date
 event_date = date(2024, 12, 6)
 
 # Current date
@@ -35,12 +36,12 @@ else:
 # Create a progress bar
 progress_bar_length = 20  # Length of the progress bar (number of characters)
 filled_length = int(progress_bar_length * (progress_percentage / 100))
-bar = '█' * filled_length + '—' * (progress_bar_length - filled_length)
+bar = '▓' * filled_length + '░' * (progress_bar_length - filled_length)
 
 # Status message with progress bar
 if total_days > 0:
     status = (f"{total_days} Days left for #Pushpa2TheRule Rampage\n"
-              f"Progress: [{bar}] {progress_percentage:.2f}%\n\n@alluarjun")
+              f"Progress: [{bar}] {progress_percentage:.0f}%\n\n@alluarjun")
 elif total_days == 0:
     status = "Today is the day! #Pushpa2TheRule Rampage begins! \n\n@alluarjun"
 else:
