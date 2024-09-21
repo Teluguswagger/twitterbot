@@ -18,8 +18,7 @@ client = tweepy.Client(consumer_key=consumer_key,
 event_date = date(2024, 12, 6)
 
 # Current date
-today = date.today() - timedelta(days = 1)
-
+today = date.today()
 # Total number of days between today and event date
 total_days = (event_date - today).days
 
