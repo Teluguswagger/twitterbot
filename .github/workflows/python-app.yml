@@ -1,7 +1,7 @@
 name: Run bot
 on:
   schedule:
-    - cron: '25 19 * * *'
+    - cron: '30 19 * * *'
   push:
     branches: [ main ]
 
