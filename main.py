@@ -1,4 +1,4 @@
-pip install pillow
+
 
 import tweepy
 import os
