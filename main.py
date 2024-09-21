@@ -39,13 +39,13 @@ bar = '▓' * filled_length + '░' * (progress_bar_length - filled_length)
 
 # Status message with progress bar after the mention of @alluarjun
 if total_days > 0:
-    status = (f"{total_days} Days left for #Pushpa2TheRule Rampage\n\n"
-              f"@alluarjun\n\n"
+    status = (f"{total_days} Days left for #Pushpa2TheRule Rampage @alluarjun\n\n"
               f"[{bar}] {progress_percentage:.0f}%")
 elif total_days == 0:
-    status = "Today is the day! #Pushpa2TheRule Rampage begins!\n\n@alluarjun"
+    status = "Today is the day! #Pushpa2TheRule Rampage begins! @alluarjun"
 else:
-    status = f"{abs(total_days)} days since #Pushpa2TheRule Rampage\n\n@alluarjun"
+    status = f"{abs(total_days)} days since #Pushpa2TheRule Rampage @alluarjun\n\n[{bar}] {progress_percentage:.0f}%"
 
 # Tweet the status
 response = client.create_tweet(text=status)
+
