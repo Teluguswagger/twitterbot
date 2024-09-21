@@ -15,7 +15,11 @@ access_token_secret = os.environ['ACCESS_TOKEN_SECRET']
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
 
-# Event date
+client = tweepy.Client(consumer_key=consumer_key,
+                       consumer_secret=consumer_secret,
+                       access_token=access_token,
+                       access_token_secret=access_token_secret)
+
 event_date = date(2024, 12, 6)
 today = date.today()
 total_days = (event_date - today).days
@@ -37,12 +41,12 @@ bar_height = 20
 filled_length = int(bar_width * (progress_percentage / 100))
 
 # Create an image with a white background
-img = Image.new('RGB', (img_width, img_height), color = 'white')
+img = Image.new('RGB', (img_width, img_height), color='white')
 draw = ImageDraw.Draw(img)
 
 # Load a font
 try:
-    font = ImageFont.truetype("arial.ttf", 20)  # You can change this to a path to your font
+    font = ImageFont.truetype("arial.ttf", 20)
 except IOError:
     font = ImageFont.load_default()
 
@@ -60,9 +64,11 @@ draw.rectangle([50, 50, 50 + filled_length, 50 + bar_height], fill="green")
 img_path = "progress_bar.png"
 img.save(img_path)
 
-# Tweet with the image
-media = client.media_upload(img_path)
+# Upload media using the old API class
+media = api.media_upload(img_path)
+
+# Post tweet using the Client (new API)
 status = f"{total_days} Days left for #Pushpa2TheRule Rampage @alluarjun"
-response = client.create_tweet(text=status, media_ids=[media.media_id])
+response = client.create_tweet(text=status, media_ids=[media.media_id_string])
 
 print("Tweet posted with image!")
