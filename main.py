@@ -14,6 +14,6 @@ client = tweepy.Client(consumer_key=consumer_key,
                     access_token=access_token,
                     access_token_secret=access_token_secret)
 
-days = date(2024,8,16) - date.today() - timedelta(days = 1)
+days = date(2024,12,06) - date.today() - timedelta(days = 1)
 cd = str(days.days) + " Days left for #Pushpa2TheRule Rampage \n\n@alluarjun"
 response = client.create_tweet(text=cd)
