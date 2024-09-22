@@ -20,7 +20,7 @@ event_date = date(2024, 12, 6)
 today = date.today()
 
 # Calculate days left until the event
-days = event_date - today - timedelta(days=1)  # Subtracting one day
+days = event_date - today   # Subtracting one day
 days_left = days.days
 
 # Total days for progress calculation (from a start date to the event date)
