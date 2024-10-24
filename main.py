@@ -14,7 +14,7 @@ client = tweepy.Client(consumer_key=consumer_key,
                     access_token=access_token,
                     access_token_secret=access_token_secret)
 
-event_date = date(2024, 12, 6)
+event_date = date(2024, 12, 5)
 
 # Current date
 today = date.today()
